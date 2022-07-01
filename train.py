@@ -26,6 +26,9 @@ import numpy as np
 import torch
 import torch.distributed as dist
 import torch.nn as nn
+import torch
+torch.cuda.empty_cache()
+torch.cuda.memory_summary(device=None, abbreviated=False)
 import yaml
 from torch.nn.parallel import DistributedDataParallel as DDP
 from torch.optim import SGD, Adam, AdamW, lr_scheduler
